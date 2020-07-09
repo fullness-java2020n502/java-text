@@ -1,0 +1,42 @@
+package practice08;
+
+import java.util.Scanner;
+
+/**
+ * 商品クラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("商品番号1を入力");
+		int product1No = scanner.nextInt();
+		System.out.println("商品名1を入力");
+		String product1Name = scanner.next();
+		System.out.println("単価1を入力");
+		int product1Price = scanner.nextInt();
+		System.out.println("在庫数1を入力");
+		int product1Stock = scanner.nextInt();
+		System.out.println("商品番号2を入力");
+		int product2No = scanner.nextInt();
+		System.out.println("商品名2を入力");
+		String product2Name = scanner.next();
+		System.out.println("単価1を入力");
+		int product2Price = scanner.nextInt();
+		System.out.println("在庫数2を入力");
+		int product2Stock = scanner.nextInt();
+		System.out.println("商品番号3を入力");
+		int product3No = scanner.nextInt();
+		System.out.println("商品名3を入力");
+		String product3Name = scanner.next();
+		System.out.println("単価3を入力");
+		int product3Price = scanner.nextInt();
+		System.out.println("在庫数3を入力");
+		int product3Stock = scanner.nextInt();
+
+	}
+}

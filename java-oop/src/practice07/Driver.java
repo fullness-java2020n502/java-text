@@ -1,0 +1,29 @@
+package practice07;
+
+import java.util.Scanner;
+
+/**
+ * 演習7 社員クラスを呼び出すクラス
+ * @author imagepi
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("社員番号を入力");
+		int input1 = scanner.nextInt();
+		System.out.println("社員名を入力");
+		String input2 = scanner.next();
+
+		// インスタンス化
+		Employee employee = new Employee(input1);
+		employee.empName = input2;
+
+		System.out.println("結果");
+		System.out.println("社員番号:" + employee.empNo);
+		System.out.println("社員名:" + employee.empName);
+	}
+}

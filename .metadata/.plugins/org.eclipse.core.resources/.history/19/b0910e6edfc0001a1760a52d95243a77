@@ -1,0 +1,13 @@
+package text2;
+
+public class Circle {
+	// スタティックフィールド
+	static double PI = 3.14;
+	// インスタンスフィールド
+	double sameNumber;
+
+	// スタティックメソッド
+	static double calc(int r) {
+		return r * r * PI;
+	}
+}

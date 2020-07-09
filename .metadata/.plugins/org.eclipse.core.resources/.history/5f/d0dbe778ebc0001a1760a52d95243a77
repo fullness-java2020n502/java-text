@@ -1,0 +1,17 @@
+package practice11;
+/**
+ * 演習11 税クラス
+ * @author imagepit
+ */
+public class Tax {
+	// スタティックフィールド
+	static final double rate;
+	// スタティックイニシャライザ
+	static {
+		rate = 0.05;
+	}
+	// スタティックメソッド
+	static int getTaxPrice(int price) {
+		return (int)(price * rate);
+	}
+}

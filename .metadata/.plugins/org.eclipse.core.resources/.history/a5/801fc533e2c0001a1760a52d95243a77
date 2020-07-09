@@ -1,0 +1,18 @@
+package text2;
+
+public class Circle {
+	// スタティックイニシャライザ
+	static {
+		System.out.println("初期化");
+		PI = 4;
+	}
+	// スタティックフィールド
+	static double PI;
+	// インスタンスフィールド
+	double sameNumber;
+
+	// スタティックメソッド
+	static double calc(int r) {
+		return r * r * PI;
+	}
+}

@@ -1,0 +1,14 @@
+package practice03;
+
+/**
+ * Employeeクラスを呼び出す側のクラス
+ * @author imagepit
+ */
+public class Driver {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}

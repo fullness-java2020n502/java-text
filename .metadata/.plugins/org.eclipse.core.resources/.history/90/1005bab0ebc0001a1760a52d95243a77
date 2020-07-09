@@ -1,0 +1,17 @@
+package practice11;
+/**
+ * 演習11 税クラス
+ * @author imagepit
+ */
+public class Tax {
+	// スタティックフィールド
+	static double rate = 0.08; // その後に処理
+	// スタティックイニシャライザ
+	static {
+		rate = 0.05; // JMV呼び込み時（一番早い）
+	}
+	// スタティックメソッド
+	static int getTaxPrice(int price) {
+		return (int)(price * rate);
+	}
+}

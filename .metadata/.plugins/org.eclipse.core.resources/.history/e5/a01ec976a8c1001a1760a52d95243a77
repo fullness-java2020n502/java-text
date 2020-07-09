@@ -1,0 +1,14 @@
+package text2;
+
+public class ExceptionCatch {
+	public static void main(String[] args) {
+		ExceptionSample sample = new ExceptionSample();
+		try {
+			sample.method();
+			System.out.println("例外発生しなかった");
+		} catch (ArithmeticException e) {
+			System.out.println("例外キャッチ:ヌルぽ");
+		}
+
+	}
+}

@@ -1,0 +1,25 @@
+package practice06;
+
+import java.util.Scanner;
+
+/**
+ * 演習6 Taxクラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("金額1を入力してください");
+		int input1 = scanner.nextInt();
+		System.out.println("金額2を入力してください");
+		int input2 = scanner.nextInt();
+		Tax tax = new Tax();
+		System.out.println("結果");
+		System.out.println("金額1の消費税額:" + tax.getTaxPrice(input1));
+		System.out.println("金額2の消費税額:" + tax.getTaxPrice(input2));
+	}
+}

@@ -1,0 +1,19 @@
+package section1.practice03;
+
+import java.util.Scanner;
+
+/**
+ * 演習3
+ * @author imagepit
+ */
+public class ConditionsIfDriver {
+	public static void main(String[] args) {
+		System.out.println("数値を入力してください");
+		Scanner scanner = new Scanner(System.in);
+		int input1 = scanner.nextInt();
+		if(input1 % 2 == 0) {
+			input1 *= 10;
+		}
+		System.out.println("結果:"+input1);
+	}
+}

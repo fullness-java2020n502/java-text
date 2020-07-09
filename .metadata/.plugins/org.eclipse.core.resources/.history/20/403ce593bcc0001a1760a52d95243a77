@@ -1,0 +1,19 @@
+package practice04;
+
+import java.util.Scanner;
+
+/**
+ * Cardクラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("カード所有者を入力");
+
+	}
+}

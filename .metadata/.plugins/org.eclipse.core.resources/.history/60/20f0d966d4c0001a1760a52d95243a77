@@ -1,0 +1,26 @@
+package text2;
+
+public class SampleDriver {
+	public static void main(String[] args) {
+		// Carクラスを呼び出す
+		Car car2 = new Car();
+		Car car = new Car("ポルシェ","青",100,60);
+		// フィールドの更新
+		//car.name = "ポルシェ";
+		//car.color = "青";
+		//car.fuel = 100;
+		//car.speed = 60;
+		// フィールドの参照
+		//String name = car.name;
+		//String color = car.color;
+		//int fuel = car.fuel;
+		System.out.println(car.name);
+		System.out.println(car.color);
+		System.out.println(car.fuel);
+		//int result = car.run();
+		// メソッドの呼び出し
+		car.speedUp(100);
+		int result = car.run();
+		System.out.println(result);
+	}
+}

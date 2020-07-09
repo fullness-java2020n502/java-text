@@ -1,0 +1,4 @@
+package text2;
+
+public class SameException extends Exception{
+}

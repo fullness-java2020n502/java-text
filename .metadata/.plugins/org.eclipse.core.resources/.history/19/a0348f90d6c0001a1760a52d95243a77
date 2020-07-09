@@ -1,0 +1,33 @@
+package practice06;
+
+import javax.sound.midi.Track;
+
+import text2.Car;
+
+/**
+ * 演習6 Taxクラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("金額1を入力してください");
+//		int input1 = scanner.nextInt();
+//		System.out.println("金額2を入力してください");
+//		String input2 = scanner.next();
+//		Tax tax = new Tax();
+//		System.out.println("結果");
+//		System.out.println("金額1の消費税額:" + tax.getTaxPrice(input1));
+//		System.out.println("金額2の消費税額:" + tax.getTaxPrice(input2));
+		Car car = new Car();
+		System.out.println(car.name);
+		System.out.println(car.color);
+		System.out.println(car.speed);
+		System.out.println(car.fuel);
+		Track track = new Track();
+	}
+}

@@ -1,0 +1,9 @@
+package text2;
+
+public class ExceptionSample {
+	// 可能性として例外をスローする事を宣言
+	void method() throws ArrayIndexOutOfBoundsException {
+		String[] strings = {"hoge","huga"};
+		strings[3] = "poyo"; // 例外発生
+	}
+}

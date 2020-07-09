@@ -1,0 +1,12 @@
+package section1.practice09;
+/**
+ * 演習9 whileを使った繰り返し
+ * @author imagepit
+ */
+public class RepeatWhileDriver {
+	public static void main(String[] args) {
+		String[] stations = {"品川","大崎","五反田","目黒","恵比寿","渋谷",
+				"原宿","代々木","新宿"};
+
+	}
+}

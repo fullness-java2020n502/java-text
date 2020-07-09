@@ -1,0 +1,9 @@
+package text;
+
+/**
+ * Triangleクラスを呼び出す（利用する）側のクラス
+ * @author imagepit
+ */
+public class TriangleDriver {
+
+}

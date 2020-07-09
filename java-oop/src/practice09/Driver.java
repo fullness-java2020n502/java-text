@@ -1,0 +1,52 @@
+package practice09;
+
+import java.util.Scanner;
+
+/**
+ * 演習9 店舗クラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("店舗名1を入力");
+		String storeName1 = scanner.next();
+		System.out.println("売上金額1を入力");
+		int sales1 = scanner.nextInt();
+		System.out.println("店舗名2を入力");
+		String storeName2 = scanner.next();
+		System.out.println("売上金額2を入力");
+		int sales2 = scanner.nextInt();
+		System.out.println("店舗名3を入力");
+		String storeName3 = scanner.next();
+		System.out.println("売上金額3を入力");
+		int sales3 = scanner.nextInt();
+
+		Store store1 = new Store();
+		store1.storeName = storeName1;
+		store1.sales = sales1;
+		Store.totalSales += sales1;// スタティックフィールドの更新
+		Store store2 = new Store();
+		store2.storeName = storeName2;
+		store2.sales = sales2;
+		Store.totalSales += sales2;// スタティックフィールドの更新
+		Store store3 = new Store();
+		store3.storeName = storeName3;
+		store3.sales = sales3;
+		Store.totalSales += sales3; // スタティックフィールドの更新
+
+		Store[] stores = {store1,store2,store3};
+		System.out.println("結果");
+		for (int i = 0; i < stores.length; i++) {
+			System.out.println("店舗名" + (i+1) + ":" + stores[i].storeName);
+			System.out.println("売上金額" + (i+1) + ":" + stores[i].sales);
+		}
+		// スタティックフィールドの参照
+		System.out.println("総売上金額:" + Store.totalSales);
+	}
+}

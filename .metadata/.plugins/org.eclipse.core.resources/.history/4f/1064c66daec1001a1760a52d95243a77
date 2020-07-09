@@ -1,0 +1,14 @@
+package text2;
+
+public class ExceptionCatch {
+	public static void main(String[] args) {
+		ExceptionSample sample = new ExceptionSample();
+		// sample.method();
+		try {
+			sample.method();
+			System.out.println("例外発生しなかった");
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("配列要素数がおかしいです");
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package text2;
+/**
+ * カプセル化パターン2
+ * @author imagepit
+ */
+public class AccessorItem2 {
+	private int v1;
+	// コンストラクタ（セッター的な）
+	public AccessorItem2(int v1) {
+		this.v1 = v1;
+	}
+}

@@ -1,0 +1,21 @@
+package text2;
+
+import java.util.Scanner;
+
+public class ExceptionCatch {
+	public static void main(String[] args) {
+		ExceptionSample sample = new ExceptionSample();
+		sample.method();
+		try(Scanner scanner = new Scanner(System.in)){
+			int input = scanner.nextInt();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+//		try {
+//			sample.method();
+//			System.out.println("例外発生しなかった");
+//		} catch (ArrayIndexOutOfBoundsException e) {
+//			System.out.println("配列要素数がおかしいです");
+//		}
+	}
+}

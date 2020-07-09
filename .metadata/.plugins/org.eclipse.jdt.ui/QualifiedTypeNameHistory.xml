@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
+    <fullyQualifiedTypeName name="section1.practice12.TriangleArtCreator"/>
+    <fullyQualifiedTypeName name="text.Triangle"/>
+    <fullyQualifiedTypeName name="text.Car"/>
+    <fullyQualifiedTypeName name="sun.security.ec.point.ImmutablePoint"/>
+    <fullyQualifiedTypeName name="practice01.Employee"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="practice02.Employee"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

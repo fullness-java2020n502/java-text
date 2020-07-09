@@ -1,0 +1,16 @@
+package text;
+
+/**
+ * Triangleクラスを呼び出す（利用する）側のクラス
+ * @author imagepit
+ */
+public class TriangleDriver {
+	/**
+	 * 実行する起点のメソッド
+	 */
+	public static void main(String[] args) {
+		// クラスを呼び出してインスタンス化（実態化）
+		Triangle triangle = new Triangle();
+		triangle.calcArea(10, 5); // 25
+	}
+}

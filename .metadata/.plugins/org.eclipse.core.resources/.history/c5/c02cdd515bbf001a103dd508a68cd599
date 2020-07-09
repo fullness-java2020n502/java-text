@@ -1,0 +1,17 @@
+package section1.practice10;
+
+import java.util.Scanner;
+
+/**
+ * 演習10 breakを使った繰り返し処理の途中終了
+ * @author imagepit
+ */
+public class RepeatBreakDriver {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("駅名を入力してください");
+		// 文字列をコンソールから取得
+		String input = scanner.next(); // <-文字列の場合のメソッド
+
+	}
+}

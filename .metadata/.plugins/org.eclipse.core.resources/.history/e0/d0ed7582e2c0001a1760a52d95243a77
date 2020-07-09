@@ -1,0 +1,10 @@
+package text2;
+
+public class CircleDriver {
+	public static void main(String[] args) {
+		Circle circle = new Circle();
+		System.out.println(Circle.PI);
+		System.out.println(circle.PI);
+		System.out.println(circle.calc(10));
+	}
+}

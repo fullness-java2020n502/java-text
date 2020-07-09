@@ -1,0 +1,15 @@
+package practice14;
+
+/**
+ * 口座クラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+}

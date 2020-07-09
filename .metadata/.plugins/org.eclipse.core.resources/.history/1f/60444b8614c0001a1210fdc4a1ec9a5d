@@ -1,0 +1,8 @@
+package text;
+
+public class Car {
+	public String name;
+	String color;
+	int speed;
+	int fuel;
+}

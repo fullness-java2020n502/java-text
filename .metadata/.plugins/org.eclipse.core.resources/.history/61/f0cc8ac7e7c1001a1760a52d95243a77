@@ -1,0 +1,8 @@
+@startuml
+skinparam shadowing false
+hide empty methods
+hide empty fields
+left to right direction
+class Animal
+class Cat extends Animal
+@enduml

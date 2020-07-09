@@ -1,0 +1,5 @@
+package practice18;
+
+public class NetAccount extends Account{
+
+}

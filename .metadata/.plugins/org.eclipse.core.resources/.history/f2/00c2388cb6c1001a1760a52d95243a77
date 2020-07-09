@@ -1,0 +1,8 @@
+package text2;
+
+public class ExceptionSample {
+	void method(){
+		String[] strings = {"hoge","huga"};
+		strings[3] = "poyo"; // 例外発生
+	}
+}

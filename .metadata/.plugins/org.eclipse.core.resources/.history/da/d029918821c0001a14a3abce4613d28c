@@ -1,0 +1,12 @@
+package practice01;
+
+/**
+ * 呼び出す側（実行起点）クラス
+ * @author imagepit
+ */
+public class Driver {
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,18 @@
+package practice05;
+
+/**
+ * 演習5 商品クラス
+ * @author imagepit
+ */
+public class Product {
+	// フィールド
+	String productName;
+	int unitPrice;
+	double rate = 0.20;
+	// メソッド
+	int getSalePrice() {
+		// 戻り値はintなのでdouble->intにキャストする必要あり
+		return unitPrice + (int)(unitPrice * rate);
+	}
+
+}

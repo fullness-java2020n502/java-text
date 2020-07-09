@@ -1,0 +1,9 @@
+package practice14;
+/**
+ * 演習14 Accountクラス
+ * @author imagepit
+ *
+ */
+public class Account {
+
+}

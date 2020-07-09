@@ -1,0 +1,15 @@
+package text;
+
+/**
+ * 配列を確認するためのクラス
+ * @author imagepit
+ *
+ */
+public class ArraySample {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}

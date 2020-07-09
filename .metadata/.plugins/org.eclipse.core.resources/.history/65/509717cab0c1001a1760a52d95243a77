@@ -1,0 +1,20 @@
+package practice18;
+
+import java.util.Scanner;
+
+public class Driver {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("割られる数を入力");
+		int input1 = scanner.nextInt();
+		System.out.println("割る数を入力");
+		int input2 = scanner.nextInt();
+		try {
+			int result = input1 / input2;
+		} catch (ArithmeticException e) {
+			System.out.println("例外が発生しました");
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,16 @@
+package practice06;
+/**
+ * 演習6 Taxクラス
+ * @author imagepit
+ */
+public class Tax {
+	double rate = 0.05;
+	/**
+	 * 消費税取得メソッド
+	 * @param price 金額
+	 * @return 消費税
+	 */
+	int getTaxPrice(int price) {
+		return (int)(price * rate);
+	}
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+    <category expanded="true" name="カテゴリーなし">
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ArrayDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ArraySample"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ConditionIfElseDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ConditionSwitchDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ConditionsIfDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ConditionsIfElseIfDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="OperationDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="RepeatBreakDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="RepeatExtendForDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="RepeatForDriver"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="RepeatWhileDriver"/>
+    </category>
+</runner>

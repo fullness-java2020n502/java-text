@@ -1,0 +1,10 @@
+package practice09;
+/**
+ * 演習9 店舗クラスを呼び出すクラス
+ * @author imagepit
+ */
+public class Driver {
+	public static void main(String[] args) {
+
+	}
+}

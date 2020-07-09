@@ -1,0 +1,21 @@
+package practice02;
+
+import java.util.Scanner;
+
+/**
+ * 実行起点クラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("社員番号1を入力");
+		int emp1no = scanner.nextInt();
+		System.out.println("社員名1を入力");
+		String emp1Name = scanner.next();
+	}
+}

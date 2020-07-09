@@ -1,0 +1,12 @@
+package practice14;
+
+public class NetAccount extends Account{
+	// Accountクラスのフィールド、メソッドをすべて持っている
+	@Deprecated // 非推奨を利用する側に警告する
+	@Override // コンパイル段階でオーバーライドしているかチェックする
+	public void print() {
+		super.print();// <- super（親の）
+		// superを使うと追記的に処理をかける
+		// すべてを再定義したい場合はsuperを使わない
+	}
+}

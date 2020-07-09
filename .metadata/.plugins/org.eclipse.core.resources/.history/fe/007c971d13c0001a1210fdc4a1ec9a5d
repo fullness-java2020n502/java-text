@@ -1,0 +1,17 @@
+package text;
+
+/**
+ * 呼ばれる（利用される）側のクラス
+ * @author imagepit
+ */
+public class Triangle {
+	/**
+	 * 三角形の面積を求める
+	 * @param teihen 底辺
+	 * @param takasa 高さ
+	 * @return 面積
+	 */
+	public double calcArea(double teihen, double takasa) {
+		return teihen * takasa / 2;
+	}
+}

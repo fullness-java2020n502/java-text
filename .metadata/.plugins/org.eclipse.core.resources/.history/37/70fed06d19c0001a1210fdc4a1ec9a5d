@@ -1,0 +1,19 @@
+package text2;
+
+import text.Car;
+
+public class SampleDriver {
+	public static void main(String[] args) {
+		// Carクラスを呼び出す
+		Car car = new Car();
+		// フィールドの更新
+		car.name = "ポルシェ";
+		car.color = "青";
+		car.fuel = 100;
+		// フィールドの参照
+		String name = car.name;
+		String color = car.color;
+		int fuel = car.fuel;
+		System.out.println(name);
+	}
+}

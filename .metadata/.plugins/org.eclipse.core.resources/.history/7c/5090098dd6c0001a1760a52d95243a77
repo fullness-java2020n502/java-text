@@ -1,0 +1,9 @@
+package text2;
+
+public class Track extends Car{
+	String tsumin;
+	public Track() {
+		super();
+		this.tsumin = "10t";
+	}
+}

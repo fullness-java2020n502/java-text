@@ -1,0 +1,12 @@
+package text2;
+
+import text.Car;
+
+public class SampleDriver {
+	public static void main(String[] args) {
+		// Carクラスを呼び出す
+		Car car = new Car();
+		// フィールドを呼び出す
+		car.name = "ポルシェ";
+	}
+}

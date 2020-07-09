@@ -1,0 +1,16 @@
+package practice08;
+/**
+ * 演習8 社員クラス
+ * @author imagepit
+ */
+public class Product {
+	// フィールド
+	int productNo;
+	String productName;
+	int unitPrice;
+	int stock;
+	// コンストラクタ
+	public Product(int pProduct) {
+		this.productNo = pProduct;
+	}
+}

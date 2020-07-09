@@ -1,0 +1,10 @@
+package practice12;
+/**
+ * 演習12 商品クラス
+ * @author imagepit
+ */
+public class Product {
+	int productNo;
+	String productName;
+	int unitPrice;
+}

@@ -1,0 +1,12 @@
+package practice10;
+/**
+ * 演習10 税クラス
+ * @author imagepit
+ */
+
+public class Tax {
+	static double rate = 0.05;
+	static int getTaxPrice(int price) {
+		return (int)(price * rate);
+	}
+}

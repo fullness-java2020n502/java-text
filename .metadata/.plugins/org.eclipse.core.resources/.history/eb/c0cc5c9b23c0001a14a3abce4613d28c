@@ -1,0 +1,15 @@
+package practice02;
+
+/**
+ * 実行起点クラス
+ * @author imagepit
+ */
+public class Driver {
+	/**
+	 * 実行起点メソッド
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,8 @@
+package practice10;
+/**
+ * 演習10 税クラス
+ * @author imagepit
+ */
+public class Tax {
+
+}

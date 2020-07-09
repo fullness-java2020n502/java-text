@@ -1,0 +1,12 @@
+package practice12;
+/**
+ * 演習12 商品クラス
+ * @author imagepit
+ */
+public class Product {
+	// カプセル化は
+	// フィールドを隠蔽（private）する
+	private int productNo;
+	private String productName;
+	private int unitPrice;
+}

@@ -1,0 +1,18 @@
+package text;
+
+public class Car {
+	// フィールド
+	public String name;
+	public String color;
+	public int speed;
+	public int fuel;
+	// メソッド
+	// クラスが持っているフィールドを処理させる
+	public int run() {
+		fuel--;
+		return speed;
+	}
+	void speedUp(int up) {
+		speed += up;
+	}
+}

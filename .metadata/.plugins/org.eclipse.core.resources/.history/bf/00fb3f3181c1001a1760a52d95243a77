@@ -1,0 +1,12 @@
+package practice13;
+
+public class Product {
+	private int productNo;
+	private String productName;
+	private int unitPrice;
+	// コンストラクタ
+	public Product(int productNo,String productName) {
+		this.productNo = productNo;
+		this.productName = productName;
+	}
+}
