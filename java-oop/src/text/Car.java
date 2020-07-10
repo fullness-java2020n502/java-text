@@ -1,5 +1,10 @@
 package text;
 
+/**
+ * Carクラス
+ * @author imagepit
+ *
+ */
 public class Car {
 	// フィールド
 	public String name;

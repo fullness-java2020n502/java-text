@@ -10812,3 +10812,93 @@ java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 08:35:12.367
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JHUQXpHz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:44.963
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:44.979
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@95cd297[org.springframework.tooling.boot.ls:1.14.0.201912170939(id=1038)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:44.979
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.793
+!MESSAGE Boot LS startup time from start to initialized: 4814ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.902
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.hmQYygQKisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE subscribing to classpath changes: sts4.classpath.hmQYygQK isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE subsribers = {sts4.classpath.hmQYygQK=クラスパス通知の送信(16008)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE project java-oop ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE project Servers ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.918
+!MESSAGE project Servers SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.933
+!MESSAGE Preparing classpath changed notification java-oop
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.933
+!MESSAGE project java-basic ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.933
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.933
+!MESSAGE project sampleproj ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.933
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.933
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.hmQYygQK => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.949
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.949
+!MESSAGE buffering callback sts4.classpath.hmQYygQK java-oop false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.949
+!MESSAGE Preparing classpath changed notification java-basic
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.949
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.949
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.964
+!MESSAGE buffering callback sts4.classpath.hmQYygQK java-basic false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.964
+!MESSAGE Preparing classpath changed notification sampleproj
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.964
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.964
+!MESSAGE classpath=26 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.996
+!MESSAGE buffering callback sts4.classpath.hmQYygQK sampleproj false 26
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:49.996
+!MESSAGE executing callback sts4.classpath.hmQYygQK 3 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-10 09:48:50.152
+!MESSAGE executing callback sts4.classpath.hmQYygQK SUCCESS [終了しました]
