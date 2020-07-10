@@ -3,7 +3,6 @@ package text;
 /**
  * 独自例外クラス
  * @author imagepit
- *
  */
 public class SameException extends Exception{
 	// キャッチした場合にメッセージなどを送りたい場合は
