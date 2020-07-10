@@ -14,8 +14,9 @@ public class Driver {
 		try {
 			account.addBalence(input2);
 		} catch (Exception e) {
-			// e.printStackTrace();
-			System.out.println("不正な貯金額が入力されました");
+			e.printStackTrace();
+			//System.out.println(e.getCause());
+			//System.out.println("不正な貯金額が入力されました");
 			return; // 早期退出
 		}
 		System.out.println("結果");

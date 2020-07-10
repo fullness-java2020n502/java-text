@@ -14,4 +14,8 @@ public class IllegalDebidException extends Exception{
 	public IllegalDebidException(String message) {
 		super(message);
 	}
+	@Override
+	public synchronized Throwable getCause() {
+		return new Throwable("エラー原因");
+	}
 }

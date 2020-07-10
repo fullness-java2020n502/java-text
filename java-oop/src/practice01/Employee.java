@@ -5,6 +5,6 @@ package practice01;
  * @author imagepit
  */
 public class Employee {
-	int empNo;
-	String empName;
+	public int empNo;
+	public String empName;
 }
