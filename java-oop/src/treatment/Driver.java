@@ -10,10 +10,17 @@ public class Driver {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("役職を入力（社長、部長、係長、一般）");
 		String input1 = scanner.next();
-		TreatmentCalculator calculator = TreatmentCalculatorFactory.createCalculator(input1);
-		outputSalary(calculator);
-		outputBonus(calculator);
-		outputPaidHolidays(calculator);
+		// 文字列から列挙型（Position）に変換
+		try {
+			Position position = Position.valueOf(input1);
+			TreatmentCalculator calculator =
+					TreatmentCalculatorFactory.createCalculator(position);
+			outputSalary(calculator);
+			outputBonus(calculator);
+			outputPaidHolidays(calculator);
+		} catch (Exception e) {
+			System.out.println("不正な値です");
+		}
 	}
 
 	public static void outputSalary(TreatmentCalculator calculator) {

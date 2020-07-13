@@ -1,15 +1,15 @@
 package treatment;
 
 public class TreatmentCalculatorFactory {
-	public static TreatmentCalculator createCalculator(String position) {
+	public static TreatmentCalculator createCalculator(Position position) {
 		switch(position) {
-		case "社長":
+		case 社長:
 			return new TreatmentCalculatorCEO();
-		case "部長":
+		case 部長:
 			return new TreatmentCalculatorButyo();
-		case "係長":
+		case 係長:
 			return new TreatmentCalculatorKakarityo();
-		case "一般":
+		case 一般:
 			return new TreatmentCalculatorNormal();
 		default:
 			return new TreatmentCalculatorNormal();
