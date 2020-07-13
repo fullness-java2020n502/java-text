@@ -8,8 +8,7 @@ public enum Direction {
 	SOUTH("南"),
 	EAST("東"),
 	WEST("西");
-	// この列挙型の型に値を内包したい場合
-	// にはコンストラクタ、フィールド、ゲッターを用意
+	// この列挙型の型に値を内包したい場合にはコンストラクタ、フィールド、ゲッターを用意
 	private String name;
 	Direction(String name) {
 		this.name = name;
