@@ -31,7 +31,11 @@ public class JDBCDriver {
 					"jdbc:postgresql://localhost:5432/jdbc", // URL
 					"jdbc", // ユーザ名
 					"jdbc" // パスワード
-					);
+			);
+
+			// 手動コミットモードを有効
+			connection.setAutoCommit(true);
+
 			System.out.println("DB接続成功");
 			// STEP3 SQLステートメントの生成
 			// Statementの生成（動的に変更しないSQL文を生成する場合）
@@ -43,12 +47,19 @@ public class JDBCDriver {
 			String sql2 = "insert into department values(?,?)";
 			preparedStatement = connection.prepareStatement(sql2);
 			// バインド変数の箇所の値をセット
-			preparedStatement.setInt(1, 4); // 1番目の?に4の値をセット
+			preparedStatement.setInt(1, 2); // 1番目の?に4の値をセット
 			preparedStatement.setString(2, "テスト2部");// 2番目の?に"テスト2部"をセット
 			// STEP4 SQLの実行（更新系(INSERT,UPDATE,DELETE)はここで完了）
 			preparedStatement.executeUpdate(); // <- 引数なし
-			// TODO STEP5 SQLの実行結果の取得（主に参照系(SELECT)で）
+
+			// コミット（SQL処理の確定）
+			connection.commit();
 		} catch (SQLException e) {
+			try {
+				connection.rollback(); // ロールバック（SQL処理をなかった状態に戻す）
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 			throw new RuntimeException("DB関連のエラー",e);
 		} finally {
 			// STEP6 DB接続の解除
@@ -56,7 +67,7 @@ public class JDBCDriver {
 				// ステートメントの解除
 				if(statement != null) statement.close();
 				if(preparedStatement != null) preparedStatement.close();
-				
+
 				if(connection != null && !connection.isClosed()) {
 					connection.close();
 					System.out.println("DB接続、ステートメント解除成功");
