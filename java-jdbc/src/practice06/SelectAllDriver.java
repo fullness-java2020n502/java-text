@@ -6,15 +6,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Scanner;
 
 public class SelectAllDriver {
 	public static void main(String[] args) {
-		// コンソールから値を取得
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("社員番号を入力");
-		int input = scanner.nextInt();
-
 		// STEP1 JDBCドライバの登録
 		try {
 			Class.forName("org.postgresql.Driver");
@@ -38,30 +32,22 @@ public class SelectAllDriver {
 			System.out.println("DB接続成功");
 
 			// STEP3 SQLステートメントの生成
-			String sql = "select * from employee where emp_no = ?";
+			String sql = "select * from employee";
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, input);
 
 			// STEP4 SQLの実行
 			resultSet = preparedStatement.executeQuery();
 			// STEP5 SQLの実行結果の取得（主に参照系(SELECT)で）
-			if(resultSet.next()) {
-				resultSet.beforeFirst(); // カーソルを最初に戻す
-				while(resultSet.next()) {
-					int empNo = resultSet.getInt("emp_no"); // <- 引数はカラム名
-					String empName = resultSet.getString("emp_name"); // <- 引数はカラム名
-					Date birthday = resultSet.getDate("birthday"); // <- 引数はカラム名
-					int dptNo = resultSet.getInt("dept_no"); // <- 引数はカラム名
-					System.out.println("====================");
-					System.out.println("社員番号:" + empNo);
-					System.out.println("社員名:" + empName);
-					System.out.println("生年月日:" + birthday);
-					System.out.println("部署番号:" + dptNo);
-				}
-			} else {
-				System.out.println("=======================");
-				System.out.println("該当する社員はいません");
-				System.out.println("=======================");
+			while(resultSet.next()) {
+				int empNo = resultSet.getInt("emp_no"); // <- 引数はカラム名
+				String empName = resultSet.getString("emp_name"); // <- 引数はカラム名
+				Date birthday = resultSet.getDate("birthday"); // <- 引数はカラム名
+				int dptNo = resultSet.getInt("dept_no"); // <- 引数はカラム名
+				System.out.println("====================");
+				System.out.println("社員番号:" + empNo);
+				System.out.println("社員名:" + empName);
+				System.out.println("生年月日:" + birthday);
+				System.out.println("部署番号:" + dptNo);
 			}
 		} catch (SQLException e) {
 			throw new RuntimeException("DB関連のエラー",e);

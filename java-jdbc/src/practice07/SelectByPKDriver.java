@@ -45,7 +45,10 @@ public class SelectByPKDriver {
 			// STEP4 SQLの実行
 			resultSet = preparedStatement.executeQuery();
 			// STEP5 SQLの実行結果の取得（主に参照系(SELECT)で）
+			boolean isEmpty = true; // 結果があったかどうかの真偽値（フラグ）
 			while(resultSet.next()) {
+				// 結果があったとみなせる
+				isEmpty = false;
 				int empNo = resultSet.getInt("emp_no"); // <- 引数はカラム名
 				String empName = resultSet.getString("emp_name"); // <- 引数はカラム名
 				Date birthday = resultSet.getDate("birthday"); // <- 引数はカラム名
@@ -55,6 +58,12 @@ public class SelectByPKDriver {
 				System.out.println("社員名:" + empName);
 				System.out.println("生年月日:" + birthday);
 				System.out.println("部署番号:" + dptNo);
+				System.out.println("====================");
+			}
+			if(isEmpty) {
+				System.out.println("=================================");
+				System.out.println("該当する社員番号の社員はいません");
+				System.out.println("=================================");
 			}
 		} catch (SQLException e) {
 			throw new RuntimeException("DB関連のエラー",e);
