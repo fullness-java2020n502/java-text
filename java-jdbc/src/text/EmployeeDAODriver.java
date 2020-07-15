@@ -6,15 +6,11 @@ import java.sql.SQLException;
 import practice08.ConnectionManager;
 
 public class EmployeeDAODriver {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException{
+
 		ConnectionManager connectionManager = new ConnectionManager();
 
-		EmployeeDAO employeeDAO = null;
-		try {
-			employeeDAO = new EmployeeDAO(connectionManager.getConnection());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		EmployeeDAO employeeDAO = new EmployeeDAO(connectionManager.getConnection());
 		// レコード1件追加
 		Employee employee1 = new Employee();
 		employee1.setEmpNo(100);
@@ -42,6 +38,9 @@ public class EmployeeDAODriver {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+
+		// データベース接続解除
+		connectionManager.closeConnection();
 
 	}
 }
