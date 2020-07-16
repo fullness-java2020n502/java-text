@@ -4,36 +4,42 @@ import java.sql.Date;
 import java.sql.SQLException;
 
 import practice08.ConnectionManager;
-
+/**
+ * DAOを呼び出す側のクラス（通常はServiceクラスですけど）
+ * @author imagepit
+ *
+ */
 public class EmployeeDAODriver {
-	public static void main(String[] args) throws SQLException{
+	public static void main(String[] args) throws Exception{
 
 		ConnectionManager connectionManager = new ConnectionManager();
-
 		EmployeeDAO employeeDAO = new EmployeeDAO(connectionManager.getConnection());
-		// レコード1件追加
+
+		// レコード1件のValueクラスを生成
 		Employee employee1 = new Employee();
-		employee1.setEmpNo(100);
+		employee1.setEmpNo(201);
 		employee1.setEmpName("DAOさん");
 		employee1.setBirthday(Date.valueOf("2000-01-01"));
 		employee1.setDeptNo(2);
-		int result = 0;
+
 		try {
-			result = employeeDAO.insert(employee1);
-			connectionManager.commit();
-			System.out.println("登録件数:" + result + "件");
+			System.out.println("登録件数:" + employeeDAO.insert(employee1) + "件");
+			connectionManager.commit(); // コミット
 		} catch (SQLException e) {
-			e.printStackTrace();
 			try {
 				connectionManager.rollback();
 			} catch (SQLException e1) {
-				e1.printStackTrace();
+				throw new RuntimeException(""); // 独自例外クラスを作ってスローしてもよい
 			}
+			// 通常はコントローラー側が例外をキャッチしてエラー画面だすなど制御するので
+			// Serviceクラスなら例外をラップして送出する
+			// Servlet(Tomcat)は全体で例外をキャッチするクラスを作れます
+			throw new RuntimeException(""); // 独自例外クラスを作ってスローしてもよい
 		}
 
 		// 全件取得
 		try {
-			// ラムダ式で繰り返し処理
+			// ラムダ式（関数プログラミング）で繰り返し処理
 			employeeDAO.selectAll().forEach(emp -> System.out.println(emp));
 		} catch (SQLException e) {
 			e.printStackTrace();

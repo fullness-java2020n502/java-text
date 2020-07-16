@@ -18,10 +18,12 @@ import java.util.List;
 public class EmployeeDAO {
 
 	/** コネクション */
-	Connection connection;
+	private Connection connection;
 
 	/**
 	 * コンストラクタ
+	 * - テストしやすくする（テストDBのコネクションを選択可能）
+	 * - 呼び出し元（Service）で複数DAOのトランザクション処理できるように
 	 * @param connection コネクション
 	 */
 	public EmployeeDAO(Connection connection) {
@@ -48,6 +50,7 @@ public class EmployeeDAO {
 			throw new SQLException("SQLエラー",e);
 		} finally {
 			try {
+				// 更新系はPreparedStatementの解除
 				if(statement != null) statement.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -66,7 +69,9 @@ public class EmployeeDAO {
 		PreparedStatement statement = null;
 		int result = 0;
 		try {
-			statement = connection.prepareStatement("update employee set emp_name = ?, birthday = ?, dept_no = ? where emp_no = ?");
+			statement = connection.prepareStatement(
+				"update employee set emp_name = ?, birthday = ?, dept_no = ? where emp_no = ?"
+			);
 			statement.setInt(4, employee.getEmpNo());
 			statement.setString(1, employee.getEmpName());
 			statement.setDate(2, employee.getBirthday());
@@ -94,7 +99,8 @@ public class EmployeeDAO {
 		PreparedStatement statement = null;
 		int result = 0;
 		try {
-			statement = connection.prepareStatement("delte from employee where emp_no = ?");
+			statement = connection.prepareStatement(
+					"delete from employee where emp_no = ?");
 			statement.setInt(1, employee.getEmpNo());
 			result = statement.executeUpdate();
 		} catch (SQLException e) {
@@ -116,7 +122,6 @@ public class EmployeeDAO {
 	 */
 	public List<Employee> selectAll() throws SQLException{
 		PreparedStatement statement = null;
-		int result = 0;
 		ResultSet resultSet = null;
 		List<Employee> employees = new ArrayList<Employee>();
 		try {
@@ -134,6 +139,7 @@ public class EmployeeDAO {
 			throw new SQLException("SQLエラー",e);
 		} finally {
 			try {
+				// PreparedStatement・ResultSetを解除
 				if(resultSet != null) resultSet.close();
 				if(statement != null) statement.close();
 			} catch (SQLException e) {
@@ -174,4 +180,11 @@ public class EmployeeDAO {
 		}
 		return employee;
 	}
+	
+	// いろんな参照系は自分で追加してよいです
+		// 生年月日の条件でもよし
+		// 社員名でもいいですし
+	
+	// 主キーが重複してinsertしようとすると例外起きますよね。
+		// どうやったら防げそうですかね。。
 }

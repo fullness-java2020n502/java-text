@@ -36,9 +36,14 @@ public class Employee {
 		this.deptNo = deptNo;
 	}
 
+	// Sytem.out.printlnするときにアドレスの参照値でなく
+	// 自分がみやすい値になるように再定義する
 	@Override
 	public String toString() {
-		return String.format("Employee[%d,%s,%s,%d]",empNo,empName,birthday,deptNo);
+		// PreparedStatementのバインド変数のように文字列を生成できる
+		// %dは何かしらの数字が代入されるもの
+		// %sは何かしらの文字列or日付が代入されるもの
+		return String.format("社員[%d,%s,%s,%d]",empNo,empName,birthday,deptNo);
 	}
 
 }
