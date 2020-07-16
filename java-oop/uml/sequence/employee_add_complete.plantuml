@@ -1,0 +1,45 @@
+@startuml
+title 社員登録完了時のシーケンス図
+
+hide footbox
+
+actor 人事部
+
+' Servletコンテナ：JavaのWebアプリを実行する環境
+' それに対してHTTPリクエストをする
+人事部 -> Servletコンテナ : POST http://localhost:8080/emp_add/complete
+
+participant employee_add_complete_jsp
+
+' ServletコンテナはURLとHTTPメソッド（POST or GET）に合わせてサーブレットを呼び出す
+Servletコンテナ -> EmployeeAddCompleteServlet : doPost()
+
+' ServletはServiceを呼び出して登録処理を行う
+EmployeeAddCompleteServlet -> EmployeeService : add(Employee)
+
+' ServiceはDAOを呼び出して登録処理を委譲する
+EmployeeService -> EmployeeDAO : insert(Employee)
+
+' DAOはDBに対してinsert文を発行する
+database DB_Employeeテーブル
+EmployeeDAO -> DB_Employeeテーブル : INSERT文
+
+' DBはDAOに更新件数のintを返す
+DB_Employeeテーブル --> EmployeeDAO : int
+
+' DAOはServiceに更新件数を返す
+EmployeeDAO --> EmployeeService : int
+
+' ServiceはServletに更新件数を返す
+EmployeeService --> EmployeeAddCompleteServlet : int
+
+' ServletがJSPにforwardする
+EmployeeAddCompleteServlet -> employee_add_complete_jsp : forward
+
+' JSPがコンテナに対してHTMLを返却
+employee_add_complete_jsp -> Servletコンテナ : 登録完了画面HTML
+
+' コンテナが人事部に対して画面をブラウザにHTTPレスポンスとして返す
+Servletコンテナ -> 人事部 : 登録完了画面
+
+@enduml
