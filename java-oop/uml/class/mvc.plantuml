@@ -1,0 +1,83 @@
+@startuml
+
+' 概要クラス図
+' 具体的なフィールドやメソッドは明記しない
+' packageとクラス、インターフェースだけ
+
+left to right direction
+hide empty methods
+hide empty fields
+skinparam shadowing false
+' コントローラー
+' 今回でいえばServlet
+' Servletは一つのHTTPのリクエスト・レスポンス毎
+' （つまり画面毎）につくる
+package controller{
+	' トップ画面
+	class TopServlet
+	' ログイン画面
+	class LoginServlet
+	' 社員一覧画面
+	class EmployeeListServlet
+	' 社員登録（フォーム入力）画面
+	class EmployeeAddInputServlet
+	' 社員登録（フォーム入力確認）画面
+	class EmployeeAddConfirmServlet
+	' 社員登録（登録完了）画面
+	class EmployeeAddCompleteServlet
+}
+
+' serviceパッケージのクラスは
+' ユースケースに書いてある機能の名前を参考に決める
+package service {
+	class EmployeeService
+}
+
+package model {
+	package value {
+		class Employee
+		class Department
+		class EmployeeAddress
+	}
+
+	package dao {
+		class EmployeeDAO
+		class DepartmentDAO
+	}
+}
+
+' Viewは今回だったらJSPになります
+' 画面の出力をどのようにするかというのを定義する責務
+package view {
+	' JSPほぼほぼHTMLなので名前もhtmlに近い感じになる
+	' Javaとしてはイレギュラーなんですけど小文字から始めます
+	' （本当は_は.にしたいけど図がくずれるので。。）
+	class top_jsp
+	class login_jsp
+	class employee_add_input_jsp
+	class employee_add_confirm_jsp
+	class employee_add_complete_jsp
+}
+
+' Servletは画面出力時にJSPに委譲（forward）する
+TopServlet --> top_jsp : forward
+LoginServlet --> login_jsp : forward
+EmployeeAddInputServlet --> employee_add_input_jsp : forward
+EmployeeAddConfirmServlet --> employee_add_confirm_jsp : foward
+EmployeeAddCompleteServlet --> employee_add_complete_jsp : forward
+
+' 関連はクラス定義の下に記述
+
+' コントローラーがサービスを呼び出す
+EmployeeAddCompleteServlet -> EmployeeService : call
+' サービスがDAOを呼び出す
+EmployeeService --> EmployeeDAO : call
+EmployeeService --> DepartmentDAO : call
+' DAOはValueクラスをデータとして利用
+EmployeeDAO --> Employee : use
+DepartmentDAO --> Department : use
+' 完了画面のサーブレットはValueクラスをユーザ入力値から生成
+EmployeeAddCompleteServlet --> Employee : new
+EmployeeAddCompleteServlet --> Department : new
+
+@enduml

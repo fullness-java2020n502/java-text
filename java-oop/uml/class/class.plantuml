@@ -1,0 +1,54 @@
+@startuml
+
+' クラス図
+
+' クラス図はほぼほぼJavaのクラスの書き方と一緒
+' アクセス修飾子だけは下記ルール
+' + public
+' - private
+' # protected
+' ~ 無指定
+' {static} スタティック
+' {abstract} 抽象メソッド
+
+' メソッドがない場合は境界線を省略
+hide empty methods
+' フィールドがない場合は境界線を省略
+hide empty fields
+' クラス図のドロップシャドウを無効
+skinparam shadowing false
+
+' パッケージ
+package value {
+
+	' コメント表示
+	class Employee extends Entity {
+		- int empNo
+		- String empName
+		- Date birthday
+		- {static} int deptNo
+
+		+ int getEmpNo()
+		+ String getEmpName()
+		+ Date getBirthday()
+		+ int getDeptNo()
+		+ void setEmpNo(int empNo)
+		+ void setEmpName(String empName)
+		+ void setBirthday(Date birthday)
+		+ void setDeptNo(int deptNo)
+	}
+
+	' インターフェースと具象クラス
+	class Cat implements Animal{
+		{abstract} String cray(String name)
+	}
+
+}
+
+package dao {
+	class EmployeeDAO
+}
+
+EmployeeDAO --> Employee : use
+
+@enduml
