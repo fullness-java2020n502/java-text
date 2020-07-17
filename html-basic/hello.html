@@ -90,21 +90,40 @@
 
 
 	<!-- img 画像表示 -->
+	<!-- サイズはwidth(横幅) height(縦幅)の属性で指定 -->
+	<!-- サイズは装飾の部類なのでCSSで指定する事も多い -->
 
 	<!-- 自サイト内で相対パス指定 -->
-	<img src="class-all.png" alt="クラス図" />
+	<img width="300" src="class-all.png" alt="クラス図" />
 
 	<!-- 外部サイトの絶対パス指定 -->
-	<img src="https://rpr.c.yimg.jp/im_siggcDOruh9AQVjybmVga0qt7g---x800-n1/amd/20200207-00161928-roupeiro-000-34-view.jpg" alt="猫" />
+	<!--
+	縦横のサイズの比率がオリジナル画像のサイズと異なると
+	画像の表示が崩れます（縦横比率(アスペクト)が）
+	-->
+	<img width="300" height="300" src="https://rpr.c.yimg.jp/im_siggcDOruh9AQVjybmVga0qt7g---x800-n1/amd/20200207-00161928-roupeiro-000-34-view.jpg" alt="猫" />
 
 
+	<!-- ul liタグ 順序なしリスト -->
+	<!-- ulは「unorderd list」 -->
+	<!-- liは「list」 -->
+	<h3>順序なしリスト</h3>
+	<ul>
+		<li>リスト1</li>
+		<li>リスト2</li>
+		<li>リスト3</li>
+	</ul>
 
 
-
-
-
-
-
+	<!-- ol liタグ 順序ありリスト -->
+	<!-- olは「orderd list」 -->
+	<!-- liは「list」 -->
+	<h3>順序ありリスト</h3>
+	<ol>
+		<li>順序ありリスト</li>
+		<li>順序ありリスト</li>
+		<li>順序ありリスト</li>
+	</ol>
 
 
 
