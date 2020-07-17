@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テーブル（表）</title>
+</head>
+<body>
+	<h1>テーブル（表）</h1>
+	<table border="1">
+		<tr><!-- 1行を表す範囲 -->
+			<!-- colspanは横方向のセルの結合 -->
+			<th colspan="4">社員番号</th><!-- 見出しの列のセル -->
+			<!--
+			<th>社員名</th>
+			<th>誕生日</th>
+			<th>部署番号</th>
+			-->
+		</tr>
+		<tr>
+			<!-- rowspanは縦方向のセルの結合 -->
+			<td rowspan="3">1</td><!-- データの列のセル -->
+			<td>高橋</td>
+			<td>2000-01-01</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<!-- <td>2</td> -->
+			<td>佐藤</td>
+			<td>2000-02-02</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<!-- <td>3</td> -->
+			<td>田中</td>
+			<td>2000-03-03</td>
+			<td>3</td>
+		</tr>
+	</table>
+</body>
+</html>
