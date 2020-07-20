@@ -32,14 +32,20 @@
 			<tr>
 				<th>アンケート</th>
 				<td>
-					山登りに興味はありますか？<br>
-					<dl>
-						<dt>&lt;お名前&gt;</dt>
-						<dd></dd>
-						<dt>選択してください</dt>
-						<dd>興味あり！ 興味なし・・・</dd>
-					</dl>
-					送信
+					<form action="http://localhost:8080/web/question" method="post">
+						山登りに興味はありますか？<br>
+						<dl>
+							<dt>&lt;お名前&gt;</dt>
+							<dd><input type="text" name="customer"></dd>
+							<dt>選択してください</dt>
+							<dd>
+								<input type="radio" name="interest" value="yes" > 興味あり！
+								<input type="radio" name="interest" value="no" > 興味なし・・・
+							</dd>
+						</dl>
+						<button type="submit" name="question" value="click_submit">送信</button>
+						<!--  <input type="submit" value="送信"> -->
+					</form>
 				</td>
 			</tr>
 		</table>
