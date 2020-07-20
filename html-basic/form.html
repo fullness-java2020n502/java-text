@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<title>フォーム</title>
+</head>
+<body>
+	<h1>フォーム</h1>
+	<!-- formタグにaction属性とmethod属性を指定 -->
+	<!-- 自PCのJavaの実行環境に通信を送るのでhttp://localhost:8080になる -->
+	<form action="http://localhost:8080/web/hello" method="post">
+		<!-- 【重要】inputタグには必ずname属性をいれる！！！ -->
+		お名前:<input type="text" name="username" value="山田太郎"><br>
+
+		パスワード: <input type="password" name="password"><br>
+
+		<!-- ラジオボタンは択一選択入力 -->
+		<!-- 選択グループは同じname属性の値にする -->
+		色：
+		<input type="radio" name="color" value="赤">赤
+		<input type="radio" name="color" value="青" checked>青
+		<input type="radio" name="color" value="黄">黄
+		<br>
+
+		<!-- チェックボックスは複数選択入力 -->
+		<!-- 選択グループはラジオボタンと同様にname属性の値を同じにする -->
+		趣味：
+		<input type="checkbox" name="interest" value="スポーツ" > スポーツ
+		<input type="checkbox" name="interest" value="映画" checked> 映画
+		<input type="checkbox" name="interest" value="読書" > 読書
+		<br>
+
+		<!-- セレクトメニュー 一つ以上選択させる入力 -->
+		<!-- selectタグにname属性を指定 -->
+		<!-- optionタグにvalue属性を指定 -->
+		<!-- selectedで初期選択を指定 -->
+		血液型：
+		<select name="bloodtype">
+			<option value="A">A型</option>
+			<option value="B">B型</option>
+			<option value="O" selected>O型</option>
+			<option value="AB">AB型</option>
+		</select>
+		<br>
+		<!-- 送信ボタン -->
+		<!-- name属性はなくてよい -->
+		<!-- value属性はボタンのラベル文字列の指定 -->
+		<input type="submit" value="送信">
+
+
+
+	</form>
+</body>
+</html>
