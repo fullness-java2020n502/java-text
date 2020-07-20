@@ -1,0 +1,118 @@
+/* コメント */
+/*
+複数行のコメント
+複数行のコメント
+*/
+div {
+	color:black;
+}
+
+/* 全称セレクタ */
+/* すべての要素に適用 */
+* {
+	/* よくfont-family */
+	/* ブラウザ側（端末）にあるフォントを指定する */
+	font-family : serif ;
+	/* デフォルトで適用されている余白を0にリセット */
+	margin:0;
+	padding:0;
+}
+
+/* タイプセレクタ */
+h3{
+	font-family: serif; /* セリフ体（明朝系） */
+	/* font-family: san-serif; ゴシック系  */
+	font-size: 30px;
+}
+
+/* クラスセレクタ */
+/*
+classは「分類」なので
+一つのHTML文書に同じ値の要素を
+複数指定可能
+*/
+.product-name { color:green; }
+.price{
+	color: red;
+	font-weight: bold; /* 太字 */
+}
+
+/* IDセレクタ */
+#main {
+	background-color: yellow; /* 背景色を黄色 */
+	margin: 30px;
+	padding: 30px;
+	border:5px solid red; /* 罫線: 5pxの線幅,実線,赤色 */
+}
+
+/* 子孫セレクタ */
+/* 直接の子じゃなくてもいい（孫でもいい） */
+p strong{
+	color: #ff0000;
+	font-weight: bold;
+	background-color: yellow;
+	border:1px solid red;
+}
+/* 子セレクタ */
+/* 直接の子じゃないと適用されない（孫じゃだめ） */
+div>strong{
+	color:green;
+}
+
+/* 文字のプロパティ */
+.italic{ font-style: italic; } /* 斜体 */
+.bold { font-weight: bold; } /* 太字 */
+
+/* 表全体を中央揃え */
+table {
+	width: 80%;
+	margin: 0 auto;
+}
+/* tdの中の行揃えはtext-align */
+td {
+	text-align: center;
+}
+
+/* 下線 */
+.underline {
+	text-decoration: underline;
+}
+
+/* 画像を中央揃え */
+img {
+	width: 100px;
+	display: block; /* imgタグはinlineなので */
+	margin: 0 auto; /* tableと同様にmargin指定 */
+}
+
+/* 要素領域 */
+.display{
+	background-color: yellow;
+	border: 1px solid red;
+	padding: 15px;
+	margin: 30px;
+	width: 200px;
+	height: 300px;
+}
+
+/* 表の罫線を重ねて自然な表示にする */
+table, th, td{
+	border-collapse: collapse;
+	padding: 10px;
+	margin: 10px;
+}
+
+th{
+	background-color: #ddd;
+}
+
+.display:hover{
+	background-color: red;
+	color: yellow;
+	font-weight: bold;
+}
+
+/* 疑似クラス */
+a:hover{ /* マウスカーソルがその要素に重なったら */
+	color: red;
+}

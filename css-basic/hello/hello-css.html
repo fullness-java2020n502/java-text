@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<title>はじめてのCSS</title>
+	<!--
+	内部参照はheadタグ内に
+	styleタグを指定して記述
+	-->
+	<style type="text/css">
+	p { color:blue; }
+	</style>
+	<!-- 外部参照 -->
+	<link rel="stylesheet" href="hello.css" />
+</head>
+<body>
+	<h1>はじめてのCSS</h1>
+	<!-- 1. インライン指定 -->
+	<!-- 構造とデザインの分離がされていない！ -->
+	<h2 style="color:red;">インライン指定</h2>
+
+	<h3>小見出し</h3>
+	<!-- 2. 内部参照で適用するタグ -->
+	<p>内部参照</p>
+
+	<!-- 3. 外部参照で適用するタグ -->
+	<div>外部参照</div>
+
+	<h3>クラスセレクタ</h3>
+	<div class="product">
+		<span class="product-name">MacBook Air</span>
+		<span class="price">200000円</span>
+	</div>
+	<div class="product">
+		<span class="product-name">MacBook Pro</span>
+		<span class="price">300000円</span>
+	</div>
+	<div class="product">
+		<span class="product-name">iPad</span>
+		<span class="price">150000円</span>
+	</div>
+	<!-- ID属性は1つのHTML文書の中では値はユニークにする -->
+	<div id="main">
+		メインエリア
+	</div>
+
+	<!-- 子孫セレクタ -->
+	<p>
+		<span>
+			テキストテキスト<strong>強調</strong>テキスト
+		</span>
+	</p>
+	<!-- 子セレクタ -->
+	<div>
+		テキストテキスト<strong>強調</strong>テキスト
+	</div>
+
+	<!-- 斜体 -->
+	<div class="italic">斜体文字</div>
+
+	<!-- 太字 -->
+	<div class="bold">太字</div>
+
+	<table border="1">
+		<tr>
+			<th>社員番号</th>
+			<th>社員名</th>
+			<th>生年月日</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>高橋</td>
+			<td>2000年1月1日</td>
+		</tr>
+	</table>
+
+	<!-- 下線 -->
+	<div class="underline">クラス図で下線はstaticです</div>
+
+
+	<!-- 画像を中央揃え -->
+	<img src="../../html-basic/practice/img/face.png" alt="自己紹介画像" />
+
+	<!-- 要素領域の確認 -->
+	<div class="display">要素領域の確認</div>
+
+	<div class="link">
+		<a href="">リンク</a>
+	</div>
+</body>
+</html>
