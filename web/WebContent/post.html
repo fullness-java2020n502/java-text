@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>ポスト送信</h1>
+	<!--
+	http://localhost:8080/web/post.htmlから
+	http://localhost:8080/web/postにリクエスト
+	 -->
+
+	<a href="post?param1=abc&param2=efg">GET送信</a>
+
+	<form action="post" method="post">
+		param1:<input type="text" name="param1" /><br>
+		param2<input type="text" name="param2" /><br>
+		<input type="submit" value="POST送信" />
+	</form>
+</body>
+</html>
