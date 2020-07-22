@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,6 +16,9 @@
 	相対パス指定なら「practice04_2」でOK
 	-->
 	<h1>足し算</h1>
+	<% if((String)request.getAttribute("errorMsg") != null){ %>
+		<p style="color:red;"><%= (String)request.getAttribute("errorMsg") %></p>
+	<% } %>
 	<form action="practice04_2" method="post">
 		<input type="text" name="param1" /> +
 		<input type="text" name="param2" />
