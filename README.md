@@ -30,11 +30,12 @@ eclipseで動的Webプロジェクトを新規作成し、プロジェクト名�
 ├── src
 │   ├── controller
 │   │   └── XxxServlet.java
-│   ├── model
+│   ├── infrastructure
 │   │   ├── dao
 │   │   │   └── XxxDAO.java
-│   │   ├── db
-│   │   │   └── ConnectionManager.java
+│   │   └── db
+│   │       └── ConnectionManager.java
+│   ├── model
 │   │   └── value
 │   │       └── Xxx.java
 │   └── service
@@ -45,14 +46,12 @@ eclipseで動的Webプロジェクトを新規作成し、プロジェクト名�
     │   ├── class-all.png
     │   ├── class-package-controller.plantuml
     │   ├── class-package-controller.png
-    │   ├── class-package-dao.plantuml
-    │   ├── class-package-dao.png
-    │   ├── class-package-db.plantuml
-    │   ├── class-package-db.png
+    │   ├── class-package-infrastructure.plantuml
+    │   ├── class-package-infrastructure.png
     │   ├── class-package-service.plantuml
     │   ├── class-package-service.png
-    │   ├── class-package-value.plantuml
-    │   └── class-package-value.png
+    │   ├── class-package-model.plantuml
+    │   └── class-package-model.png
     └── sql
         ├── create_table.sql
         └── create_user.sql
@@ -99,6 +98,7 @@ create table t_user(
         - 正確性
         - わかりやすさ・見やすさ
         - 統一感
+        - **最初は粗い粒度で設計して実装に取り掛かり、実装完了後に設計を見直すのが良い**
     - ソースコード
         - バグのないコードになっているか
         - 不要なコードが含まれていないか
@@ -108,6 +108,7 @@ create table t_user(
             - [パッケージ](https://future-architect.github.io/coding-standards/documents/forJava/Java%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E8%A6%8F%E7%B4%84.html#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8)
             - [クラス](https://future-architect.github.io/coding-standards/documents/forJava/Java%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E8%A6%8F%E7%B4%84.html#%E3%82%AF%E3%83%A9%E3%82%B9)
             - [メソッド](https://future-architect.github.io/coding-standards/documents/forJava/Java%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E8%A6%8F%E7%B4%84.html#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)
+            - **インデント!!!**
     - セキュリティ・脆弱性
         - 認証・認可（セッション周り）
         - SQLインジェクション
@@ -119,12 +120,14 @@ create table t_user(
 
 ## 機能追加について
 
-- まずは要件通りのものを開発する
+- まずは要件通りのものを**初期バージョン**として開発する
     - 要件通りのものが完成したら`bookinfo-v1.zip`という名前でプロジェクトをzip圧縮する
-- 要件通りのものが完成したら機能追加を検討する
+- 要件通りのものが完成したら機能追加バージョンとして検討し開発する
     - 機能追加版は`bookinofo-v2.zip`でzip圧縮する
     - 機能追加版はDB定義の変更をしてもよい
         - その場合は`create_user.sql`、`create_table.sql`は修正する
+    - 初期バージョンから機能追加・変更した場所は必ず明記する
+        - README.mdを作成してそこに記載する
 
 ## 納品方法
 
