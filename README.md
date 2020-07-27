@@ -9,6 +9,8 @@
 
 ## フォルダ構成
 
+eclipseで動的Webプロジェクトを新規作成し、プロジェクト名は`bookinfo`にする。
+
 ```
 ├── README.md
 ├── WebContent
@@ -114,3 +116,16 @@ create table t_user(
     - 見栄え・デザイン
 - 納期（Delivery）
     - 期限までに完成できるか
+
+## 機能追加について
+
+- まずは要件通りのものを開発する
+    - 要件通りのものが完成したら`bookinfo-v1.zip`という名前でプロジェクトをzip圧縮する
+- 要件通りのものが完成したら機能追加を検討する
+    - 機能追加版は`bookinofo-v2.zip`でzip圧縮する
+    - 機能追加版はDB定義の変更をしてもよい
+        - その場合は`create_user.sql`、`create_table.sql`は修正する
+
+## 納品方法
+
+- `bookinfo-v1.zip`（機能追加がある場合は`bookinfo-v2.zip`も）を提出する
