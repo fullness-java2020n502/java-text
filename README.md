@@ -7,25 +7,25 @@
 - Javadocドキュメント
 - 発表資料
 
-## フォルダ構成
+## プロジェクト構成
 
 - eclipseで動的Webプロジェクトを新規作成し、プロジェクト名は`bookinfo`にする。
 - Tomcatのバージョンは`9`にする
 
 ```
-├── README.md
+├── README.md（プロジェクト概要を説明するテキストファイル　Markdown形式）
 ├── WebContent
 │   ├── META-INF
 │   │   └── MANIFEST.MF
 │   ├── WEB-INF
-│   │   ├── jsp
+│   │   ├── jsp（以下にフォルダを作るのはOK）
 │   │   │   └── xxxx.jsp
 │   │   └── lib
 │   │       ├── jstl-api-1.2.jar
 │   │       ├── jstl-impl-1.2.jar
 │   │       └── postgresql-42.2.8.jar
 │   └── css
-│       └── style.css
+│       └── style.css（ファイル名は任意）
 ├── doc
 │   └──（JavaDoc形式ドキュメント）
 ├── src
@@ -45,7 +45,7 @@
     ├── doc
     │   └── （発表資料など、その他資料）
     ├── uml
-    │   ├── class-all.plantuml
+    │   ├── class-all.plantuml（概要クラス図）メソッドとかフィールドななくていい、クラス、パッケージ名と関連だけ
     │   ├── class-all.png
     │   ├── class-package-controller.plantuml
     │   ├── class-package-controller.png
@@ -99,7 +99,7 @@ create table t_user(
 - 品質（Quality）
     - 設計
         - 正確性
-        - わかりやすさ・見やすさ
+        - **わかりやすさ・見やすさ**
         - 統一感
         - **最初は粗い粒度で設計して実装に取り掛かり、実装完了後に設計を見直すのが良い**
     - ソースコード
@@ -116,8 +116,9 @@ create table t_user(
         - 認証・認可（セッション周り）
         - SQLインジェクション
         - クロスサイトスクリプティング
-    - ユーザビリティ
-    - 見栄え・デザイン
+        - 二重投稿（クロスサイトリクエストフォージェリ）
+    - ユーザビリティ（低）
+    - 見栄え・デザイン（低）
 - 納期（Delivery）
     - 期限までに完成できるか
 
