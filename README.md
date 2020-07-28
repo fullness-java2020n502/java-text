@@ -9,7 +9,8 @@
 
 ## フォルダ構成
 
-eclipseで動的Webプロジェクトを新規作成し、プロジェクト名は`bookinfo`にする。
+- eclipseで動的Webプロジェクトを新規作成し、プロジェクト名は`bookinfo`にする。
+- Tomcatのバージョンは`9`にする
 
 ```
 ├── README.md
@@ -41,6 +42,8 @@ eclipseで動的Webプロジェクトを新規作成し、プロジェクト名�
 │   └── service
 │       └── XxxService.java
 └── plan
+    ├── doc
+    │   └── （発表資料など、その他資料）
     ├── uml
     │   ├── class-all.plantuml
     │   ├── class-all.png
